@@ -60,6 +60,7 @@ function playGame(rounds)
             computerWins += 1;
             console.log("you lose!");
         }
+        else console.log("it's a draw!");
 
         console.log("Player: " + playerWins);
         console.log("Computer: " + computerWins);
