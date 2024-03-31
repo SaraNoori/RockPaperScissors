@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="RockPaperScissors.js"></script>
+    <script src="RockPaperScissors.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- <div class="winCounter"></div> -->
-    <p class="playerWin">Player: </p>
-    <p class="compWin">Computer: </p>
+    <p class="playerWin">Player: 0</p>
+    <p class="computerWin">Computer: 0</p>
 
     <div class="art">
-        <p class="playerMove ascii"></p>
-        <p class="computerMove ascii"></p>
+        <pre class="playerArt ascii"></pre>
+        <pre class="computerArt ascii"></pre>
     </div>
 
     <div>
@@ -24,12 +24,12 @@
     </div>
 
     <div class="buttonHolder">
-        <button class="rockBut option">Rock</button>
-        <button class="paperBut option">Paper</button>
-        <button class="scissorsBut option">Scissors</button>
+        <button class="rockBut" id="option">Rock</button>
+        <button class="paperBut" id="option">Paper</button>
+        <button class="scissorsBut" id="option">Scissors</button>
     </div>
 
-    <button class="playButton">Play Again</button>
+    <button class="restartButton">Start Again</button>
 
 </body>
 </html>
