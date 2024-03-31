@@ -1,18 +1,20 @@
 "use strict";
 
+
+
+// formatted weirdly here because js doesn't like it
+// when I start new lines in the middle of a string
 var rockASCII =
     "    _______<br />---'   ____)<br />      (_____)<br />      (_____)<br />      (____)<br />---.__(___)";
 
 var paperASCII =
-    "    _______<br />---'   ____)____<br />          ______)<br />          _______)<br />          _______)<br />---.__________)<br />"
+    "    _______<br />---'   ____)____<br />          ______)<br />          _______)<br />          _______)<br />---.__________)<br />";
 
 var scissorsASCII =
-    "    _______<br />---'   ____)____<br />          ______)<br />        __________)<br />      (____)<br />---.__(___)"
+    "    _______<br />---'   ____)____<br />          ______)<br />        __________)<br />      (____)<br />---.__(___)";
 
 
-
-
-
+// all variables and pointers
 var computerWins = 0;
 var playerWins = 0;
 
@@ -45,7 +47,6 @@ function restart()
 }
 
 
-
 function processSelection(event)
 {
     var buttonType = event.target.getAttribute("class");
@@ -65,8 +66,8 @@ function playRound(playerSelection, computerSelection)
 {
     playerSelection.toLowerCase();
     playerSelection = playerSelection.split("But")[0];
-    changePlayerArt(playerSelection);
 
+    changePlayerArt(playerSelection);
     addToHist("The computer Chose: " + computerSelection);
     
     if (playerSelection === computerSelection)
@@ -91,11 +92,8 @@ function playRound(playerSelection, computerSelection)
         if (computerSelection === "rock") return "lose";
         else return "win";
     }
-
-    return "I don't recognize that move";
-
-
 }
+
 
 function processReult(result)
 {
@@ -119,7 +117,8 @@ function processReult(result)
 
 }
 
-
+// movement history of actions taken
+// and results of rounds
 function addToHist(text)
 {
     removeOldHist();
@@ -128,6 +127,9 @@ function addToHist(text)
     historyLog.appendChild(log);
 }
 
+// special history is to be used for
+// the result of a game
+// wins, losses, and draws will look special on screen to differentiate them
 function addSpecialHist(text)
 {
     removeOldHist();
@@ -147,6 +149,9 @@ function removeOldHist()
     }
 }
 
+// change the innerHTML instead of textContent
+// because textContent does not do kindly 
+// with new lines and extra spaces
 function changePlayerArt(move)
 {
     if (move == "rock")
