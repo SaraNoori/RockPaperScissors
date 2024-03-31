@@ -1,0 +1,53 @@
+body
+{
+    background-color: rgb(31, 26, 17);
+}
+
+p, button
+{
+    font-family: 'Comic Sans MS';
+    font-weight:bold;
+}
+
+p
+{
+    color: white;
+    
+}
+
+button
+{
+    background-color: rgb(231, 217, 178);
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+button.option
+{
+    margin: auto 0.5em;
+}
+
+button.playButton
+{
+    width: 100px;
+    margin: 1em 9%;
+}
+
+div
+{
+    display: flexbox;
+}
+
+div.buttonHolder
+{
+    width: 20em;
+    padding: 1em;
+    background-color: rgb(244, 228, 194);
+    border: solid rgb(231, 174, 99) 0.5em;
+}
+
+.ascii
+{
+    font-family: 'Courier New', Courier, monospace;
+}

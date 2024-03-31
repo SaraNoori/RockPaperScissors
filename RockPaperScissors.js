@@ -1,3 +1,5 @@
+"use strict";
+
 function getComputerChoice()
 {
     let options = ["rock", "paper", "scissors"];
@@ -68,4 +70,4 @@ function playGame(rounds)
     }
 }
 
-playGame(5);
+//playGame(5);
